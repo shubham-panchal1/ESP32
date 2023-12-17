@@ -4,8 +4,8 @@ void setup() {
 pinMode (LED_BUILTIN, OUTPUT);
 }
 void loop() {
-digitalWrite(LED_BUILTIN, HIGH);
-delay(1000);
-digitalWrite(LED_BUILTIN, LOW);
-delay(500);
+digitalWrite(LED_BUILTIN, HIGH); 	// turn on the LED
+delay(1000); // wait for one second
+digitalWrite(LED_BUILTIN, LOW); 	// turn off the LED
+delay(500); // wait for half a second or 500 milliseconds
 }
