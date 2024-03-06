@@ -1,4 +1,6 @@
 #include <Wire.h>
+#define I2C_SDA_PIN 23
+#define I2C_SCL_PIN 19
 
 void eepromSize() {
   Serial.println("Discovering eeprom sizes 0x50..0x57");
@@ -113,7 +115,7 @@ bool i2cReady(uint8_t adr) {
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin(23, 19);  //sda - 23, scl - 19
+  Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);  //sda - 23, scl - 19
   Serial.println("EEPROM size");
   eepromSize();
 }
